@@ -79,8 +79,7 @@ body {
     opacity: 1;
     transform: translate(0px); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
@@ -88,20 +87,21 @@ body {
   border-radius: 100px;
   transition: all 0.2s;
   position: relative; }
-  .btn:link:hover,
-  .btn:visited:hover {
+  .btn:link:hover, .btn:visited:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
-  .btn:link:active,
-  .btn:visited:active {
+    .btn:link:hover::after, .btn:visited:hover::after {
+      transform: scaleX(1.2) scaleY(1.4);
+      opacity: 0; }
+  .btn:link:active, .btn:visited:active {
     transform: translateY(-0.5px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
-  .btn:link--white,
-  .btn:visited--white {
+  .btn:link--white, .btn:visited--white {
     background-color: #fff;
     color: #777; }
-  .btn:link::after,
-  .btn:visited::after {
+    .btn:link--white::after, .btn:visited--white::after {
+      background-color: #fff; }
+  .btn:link::after, .btn:visited::after {
     content: "";
     display: inline-block;
     height: 100%;
@@ -112,13 +112,5 @@ body {
     left: 0;
     z-index: -1;
     transition: all 0.4s; }
-  .btn:link--white::after,
-  .btn:visited--white::after {
-    background-color: #fff; }
-  .btn:link:hover::after,
-  .btn:visited:hover::after {
-    transform: scaleX(1.2) scaleY(1.4);
-    opacity: 0; }
-  .btn:link--animated,
-  .btn:visited--animated {
+  .btn:link--animated, .btn:visited--animated {
     animation: moveInBottom 0.8s ease; }
