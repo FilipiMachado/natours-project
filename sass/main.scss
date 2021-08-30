@@ -1,11 +1,13 @@
-// SASS Color Variables
-$color-primary: #55c5c0;
-$color-primary-light: #6fc1d5cc;
-$color-primary-dark: #3066ddcc;
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
 
-$color-grey-dark: #777;
-$color-white: #fff;
-$color-black: #000;
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "pages/home";
 
 * {
   margin: 0;
