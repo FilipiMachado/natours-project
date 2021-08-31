@@ -41,6 +41,44 @@ body {
     opacity: 1;
     transform: translate(0px); } }
 
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: relative; }
+  .btn:link:hover, .btn:visited:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+    .btn:link:hover::after, .btn:visited:hover::after {
+      transform: scaleX(1.2) scaleY(1.4);
+      opacity: 0; }
+  .btn:link:active, .btn:visited:active {
+    transform: translateY(-0.5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  .btn:link::after, .btn:visited::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s; }
+  .btn:link--animated, .btn:visited--animated {
+    animation: moveInBottom 0.8s ease; }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+
+.btn::after {
+  background-color: #fff; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(111, 193, 213, 0.8), rgba(48, 102, 221, 0.8)), url(../img/hero.jpg);
@@ -80,41 +118,3 @@ body {
     font-weight: 700;
     letter-spacing: 17.4px;
     animation: moveInRight 1s ease-out; }
-
-.btn:link, .btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 15px 40px;
-  display: inline-block;
-  border-radius: 100px;
-  transition: all 0.2s;
-  position: relative; }
-  .btn:link:hover, .btn:visited:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
-    .btn:link:hover::after, .btn:visited:hover::after {
-      transform: scaleX(1.2) scaleY(1.4);
-      opacity: 0; }
-  .btn:link:active, .btn:visited:active {
-    transform: translateY(-0.5px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
-  .btn:link::after, .btn:visited::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all 0.4s; }
-  .btn:link--animated, .btn:visited--animated {
-    animation: moveInBottom 0.8s ease; }
-
-.btn--white {
-  background-color: #fff;
-  color: #777; }
-
-.btn::after {
-  background-color: #fff; }
